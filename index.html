@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElectroHogar | Tu tienda de electrodomésticos</title>
+  <meta name="description" content="ElectroHogar – La mejor tienda de electrodomésticos. Refrigeradores, lavarropas, TVs, aires acondicionados y más. Envío gratis. Cuotas sin interés." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Electro<span class="logo-accent">Hogar</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#productos" class="nav-link">Productos</a></li>
+        <li><a href="#ofertas" class="nav-link">Ofertas</a></li>
+        <li><a href="#marcas" class="nav-link">Marcas</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-cart" id="cartBtn" aria-label="Carrito">
+          🛒 <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="btn-primary nav-cta">Comprar Ahora</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <img src="hero_banner.png" alt="ElectroHogar banner" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge animate-slide-up">🔥 Hasta 40% de descuento</div>
+      <h1 class="hero-title animate-slide-up delay-1">
+        Tu Hogar Merece<br /><span class="gradient-text">lo Mejor</span>
+      </h1>
+      <p class="hero-subtitle animate-slide-up delay-2">
+        Electrodomésticos premium con garantía, envío gratis y hasta 18 cuotas sin interés.
+        Calidad que transforma tu hogar.
+      </p>
+      <div class="hero-actions animate-slide-up delay-3">
+        <a href="#productos" class="btn-primary btn-lg">Ver Productos</a>
+        <a href="#ofertas" class="btn-outline btn-lg">Ver Ofertas</a>
+      </div>
+      <div class="hero-stats animate-slide-up delay-4">
+        <div class="stat">
+          <span class="stat-value">+15K</span>
+          <span class="stat-label">Clientes</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">500+</span>
+          <span class="stat-label">Productos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">18</span>
+          <span class="stat-label">Cuotas sin interés</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES STRIP ===== -->
+  <section class="features-strip">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item">
+          <span class="feature-icon">🚚</span>
+          <div>
+            <strong>Envío Gratis</strong>
+            <p>En compras mayores a $50.000</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">💳</span>
+          <div>
+            <strong>18 Cuotas sin Interés</strong>
+            <p>Todas las tarjetas</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🛡️</span>
+          <div>
+            <strong>Garantía Oficial</strong>
+            <p>12 a 24 meses</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">↩️</span>
+          <div>
+            <strong>Devoluciones Gratis</strong>
+            <p>30 días sin preguntas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section class="section products-section" id="productos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Catálogo</span>
+        <h2 class="section-title">Nuestros <span class="gradient-text">Productos</span></h2>
+        <p class="section-subtitle">Todo lo que tu hogar necesita en un solo lugar</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all" id="filter-all">Todos</button>
+        <button class="filter-btn" data-filter="frio" id="filter-frio">Frío</button>
+        <button class="filter-btn" data-filter="lavado" id="filter-lavado">Lavado</button>
+        <button class="filter-btn" data-filter="imagen" id="filter-imagen">Imagen</button>
+        <button class="filter-btn" data-filter="clima" id="filter-clima">Clima</button>
+        <button class="filter-btn" data-filter="cocina" id="filter-cocina">Cocina</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+
+        <div class="product-card" data-category="frio">
+          <div class="product-badge sale">-25%</div>
+          <div class="product-img-wrap">
+            <img src="product_refrigerator.png" alt="Refrigerador Samsung" class="product-img" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Refrigeración</span>
+            <h3 class="product-name">Refrigerador Samsung No Frost 400L</h3>
+            <div class="product-rating">★★★★★ <span>(128 reseñas)</span></div>
+            <div class="product-price">
+              <span class="price-old">$749.999</span>
+              <span class="price-current">$562.499</span>
+            </div>
+            <p class="product-cuotas">18 x $31.249 sin interés</p>
+            <button class="btn-add-cart" data-product="Refrigerador Samsung No Frost 400L" data-price="$562.499">Agregar al Carrito 🛒</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="lavado">
+          <div class="product-badge new">Nuevo</div>
+          <div class="product-img-wrap">
+            <img src="product_washing_machine.png" alt="Lavarropas LG" class="product-img" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Lavado</span>
+            <h3 class="product-name">Lavarropas LG Inverter 9Kg</h3>
+            <div class="product-rating">★★★★★ <span>(95 reseñas)</span></div>
+            <div class="product-price">
+              <span class="price-current">$489.999</span>
+            </div>
+            <p class="product-cuotas">18 x $27.222 sin interés</p>
+            <button class="btn-add-cart" data-product="Lavarropas LG Inverter 9Kg" data-price="$489.999">Agregar al Carrito 🛒</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="imagen">
+          <div class="product-badge sale">-30%</div>
+          <div class="product-img-wrap">
+            <img src="product_tv.png" alt="Smart TV 65 pulgadas" class="product-img" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Imagen & Sonido</span>
+            <h3 class="product-name">Smart TV 4K OLED 65" Sony Bravia</h3>
+            <div class="product-rating">★★★★★ <span>(214 reseñas)</span></div>
+            <div class="product-price">
+              <span class="price-old">$1.199.999</span>
+              <span class="price-current">$839.999</span>
+            </div>
+            <p class="product-cuotas">18 x $46.666 sin interés</p>
+            <button class="btn-add-cart" data-product="Smart TV 4K OLED 65 Sony Bravia" data-price="$839.999">Agregar al Carrito 🛒</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="clima">
+          <div class="product-badge hot">🔥 Top Ventas</div>
+          <div class="product-img-wrap">
+            <img src="product_ac.png" alt="Aire Acondicionado" class="product-img" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Climatización</span>
+            <h3 class="product-name">Aire Acondicionado Split Inverter 3000 Frig.</h3>
+            <div class="product-rating">★★★★☆ <span>(189 reseñas)</span></div>
+            <div class="product-price">
+              <span class="price-current">$699.999</span>
+            </div>
+            <p class="product-cuotas">18 x $38.888 sin interés</p>
+            <button class="btn-add-cart" data-product="Aire Acondicionado Split Inverter 3000 Frig." data-price="$699.999">Agregar al Carrito 🛒</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="cocina">
+          <div class="product-badge sale">-20%</div>
+          <div class="product-img-wrap">
+            <img src="product_microwave.png" alt="Microondas" class="product-img" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Cocina</span>
+            <h3 class="product-name">Microondas Digital Whirlpool 30L Inox</h3>
+            <div class="product-rating">★★★★★ <span>(76 reseñas)</span></div>
+            <div class="product-price">
+              <span class="price-old">$189.999</span>
+              <span class="price-current">$151.999</span>
+            </div>
+            <p class="product-cuotas">18 x $8.444 sin interés</p>
+            <button class="btn-add-cart" data-product="Microondas Digital Whirlpool 30L Inox" data-price="$151.999">Agregar al Carrito 🛒</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="lavado">
+          <div class="product-badge new">Nuevo</div>
+          <div class="product-img-wrap">
+            <img src="product_washing_machine.png" alt="Secarropas" class="product-img" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Lavado</span>
+            <h3 class="product-name">Secarropas de Condensación Electrolux 8Kg</h3>
+            <div class="product-rating">★★★★☆ <span>(42 reseñas)</span></div>
+            <div class="product-price">
+              <span class="price-current">$379.999</span>
+            </div>
+            <p class="product-cuotas">18 x $21.111 sin interés</p>
+            <button class="btn-add-cart" data-product="Secarropas de Condensación Electrolux 8Kg" data-price="$379.999">Agregar al Carrito 🛒</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROMO BANNER ===== -->
+  <section class="promo-banner" id="ofertas">
+    <div class="promo-bg"></div>
+    <div class="container promo-content">
+      <div class="promo-text">
+        <span class="promo-tag">⏰ Oferta por tiempo limitado</span>
+        <h2>Liquidación de Fin de Temporada</h2>
+        <p>Hasta <strong>40% OFF</strong> en aires acondicionados y refrigeradores seleccionados. ¡Solo por esta semana!</p>
+        <a href="#productos" class="btn-primary btn-lg">Aprovechar Oferta</a>
+      </div>
+      <div class="promo-countdown">
+        <p class="countdown-label">La oferta termina en:</p>
+        <div class="countdown-grid">
+          <div class="countdown-item"><span id="cd-days">02</span><small>Días</small></div>
+          <div class="countdown-item"><span id="cd-hours">14</span><small>Horas</small></div>
+          <div class="countdown-item"><span id="cd-mins">38</span><small>Min</small></div>
+          <div class="countdown-item"><span id="cd-secs">00</span><small>Seg</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BRANDS ===== -->
+  <section class="section brands-section" id="marcas">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Partners</span>
+        <h2 class="section-title">Las Mejores <span class="gradient-text">Marcas</span></h2>
+      </div>
+      <div class="brands-marquee-wrap">
+        <div class="brands-marquee">
+          <span class="brand-logo">Samsung</span>
+          <span class="brand-logo">LG</span>
+          <span class="brand-logo">Sony</span>
+          <span class="brand-logo">Whirlpool</span>
+          <span class="brand-logo">Electrolux</span>
+          <span class="brand-logo">Philips</span>
+          <span class="brand-logo">Bosch</span>
+          <span class="brand-logo">Panasonic</span>
+          <span class="brand-logo">Mabe</span>
+          <span class="brand-logo">Midea</span>
+          <!-- Duplicated for seamless loop -->
+          <span class="brand-logo">Samsung</span>
+          <span class="brand-logo">LG</span>
+          <span class="brand-logo">Sony</span>
+          <span class="brand-logo">Whirlpool</span>
+          <span class="brand-logo">Electrolux</span>
+          <span class="brand-logo">Philips</span>
+          <span class="brand-logo">Bosch</span>
+          <span class="brand-logo">Panasonic</span>
+          <span class="brand-logo">Mabe</span>
+          <span class="brand-logo">Midea</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Testimonios</span>
+        <h2 class="section-title">Lo que dicen <span class="gradient-text">nuestros clientes</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Compré el lavarropas LG y llegó en menos de 48hs. La instalación fue gratis y el producto es increíble. Definitivamente volvería a comprar acá."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MG</div>
+            <div>
+              <strong>María González</strong>
+              <span>Buenos Aires</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card featured">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"El televisor Sony Bravia que compré superó todas mis expectativas. La calidad de imagen es impresionante y el precio fue mucho mejor que en otros lados."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CR</div>
+            <div>
+              <strong>Carlos Rodríguez</strong>
+              <span>Córdoba</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Excelente atención al cliente. Tuve un problema con el aire acondicionado y lo resolvieron inmediatamente. Recomiendo ElectroHogar al 100%."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">LP</div>
+            <div>
+              <strong>Laura Pérez</strong>
+              <span>Rosario</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact-section" id="contacto">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <span class="section-tag">Contacto</span>
+        <h2 class="section-title">¿Tienes alguna <span class="gradient-text">pregunta?</span></h2>
+        <p>Estamos disponibles para ayudarte a encontrar el electrodoméstico perfecto para tu hogar.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Dirección</strong>
+              <p>Av. Corrientes 1234, Buenos Aires</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <strong>Teléfono</strong>
+              <p>+54 11 4567-8900</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <p>ventas@electrohogar.com.ar</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🕐</span>
+            <div>
+              <strong>Horario</strong>
+              <p>Lun–Sáb: 9:00 – 20:00 hs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Nombre completo</label>
+          <input type="text" id="name" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="tu@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Teléfono</label>
+          <input type="tel" id="phone" placeholder="+54 11 1234-5678" />
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-full">Enviar Mensaje ✉️</button>
+        <div class="form-success" id="formSuccess">
+          ✅ ¡Mensaje enviado! Te contactaremos a la brevedad.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">Electro<span class="logo-accent">Hogar</span></span>
+        </a>
+        <p>Tu tienda de confianza en electrodomésticos desde 2005. Calidad, variedad y el mejor precio garantizado.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="Facebook">f</a>
+          <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+          <a href="#" class="social-btn" aria-label="WhatsApp">wa</a>
+          <a href="#" class="social-btn" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="#">Refrigeración</a></li>
+          <li><a href="#">Lavado</a></li>
+          <li><a href="#">Imagen & Sonido</a></li>
+          <li><a href="#">Climatización</a></li>
+          <li><a href="#">Cocina</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Quiénes Somos</a></li>
+          <li><a href="#">Trabaja con Nosotros</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Prensa</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#">Centro de Ayuda</a></li>
+          <li><a href="#">Seguimiento de Pedido</a></li>
+          <li><a href="#">Garantías</a></li>
+          <li><a href="#">Devoluciones</a></li>
+          <li><a href="#">Financiación</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ElectroHogar. Todos los derechos reservados.</p>
+      <div class="footer-legal">
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CART TOAST ===== -->
+  <div class="cart-toast" id="cartToast">
+    <span class="toast-icon">✅</span>
+    <span class="toast-msg" id="toastMsg">Producto agregado al carrito</span>
+  </div>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
