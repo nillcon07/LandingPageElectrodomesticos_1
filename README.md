@@ -33,14 +33,19 @@ Abrí el archivo `index.html` directamente en tu navegador para ver la landing p
 ```
 LandingPageElectrodomesticos/
 ├── index.html               # Estructura principal
-├── style.css                # Estilos y diseño
-├── script.js                # Interactividad y animaciones
-├── hero_banner.png          # Imagen hero
-├── product_refrigerator.png # Foto refrigerador
-├── product_washing_machine.png # Foto lavarropas
-├── product_tv.png           # Foto Smart TV
-├── product_ac.png           # Foto aire acondicionado
-└── product_microwave.png    # Foto microondas
+├── README.md                # Documentación
+└── assets/
+    ├── css/
+    │   └── style.css        # Estilos y diseño
+    ├── js/
+    │   └── script.js        # Interactividad y animaciones
+    └── images/
+        ├── hero_banner.png             # Imagen hero
+        ├── product_refrigerator.png    # Foto refrigerador
+        ├── product_washing_machine.png # Foto lavarropas
+        ├── product_tv.png              # Foto Smart TV
+        ├── product_ac.png              # Foto aire acondicionado
+        └── product_microwave.png       # Foto microondas
 ```
 
 ---
