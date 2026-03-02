@@ -2,7 +2,7 @@
 
 Una landing page moderna y premium para un negocio de venta de electrodomésticos. Diseñada con HTML, CSS y JavaScript puro, sin frameworks ni dependencias externas.
 
-![Hero Section](hero_banner.png)
+![Hero Section](assets/images/hero_banner.png)
 
 ---
 
